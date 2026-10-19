@@ -1,0 +1,14 @@
+{
+  "name": "maroqandquiz",
+  "version": "1.0.0",
+  "private": true,
+  "description": "MaroqAndQuiz — intellektual viktorina platformasi (statik sayt, brauzerda ishlaydi)",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node tests/run.mjs",
+    "start": "npx --yes serve public -l 3000",
+    "dev": "npx --yes serve public -l 3000"
+  },
+  "engines": { "node": ">=18" }
+}
