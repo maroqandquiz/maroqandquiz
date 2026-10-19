@@ -1,1 +1,0 @@
-{const old={rounds:Array.from({length:9},(_,i)=>({id:'o'+i,title:'Eski '+i,type:'1-raund',qs:[{text:'q',o:{A:'a',B:'b',D:'d',E:'e'},c:'A',img:''}],qTime:30,aTime:60,qMusic:'',aMusic:'',draft:false,created:1,mod:1})),sponsors:[]};__store.kv.set('state',old)}
