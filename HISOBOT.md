@@ -4,7 +4,7 @@
 Bitta fayldan iborat statik sayt (vanilla JavaScript, IndexedDB). React, TypeScript, ESLint, backend va tashqi servislar **yo'q**,
 shuning uchun lint/TypeScript tekshiruvi va dependency o'rnatish bosqichlari qo'llanilmadi.
 
-## O'tkazilgan tekshiruvlar (`npm test`, 7 ta to'plam — hammasi muvaffaqiyatli)
+## O'tkazilgan tekshiruvlar (`npm test`, 10 ta to'plam — hammasi muvaffaqiyatli)
 | To'plam | Nimani tekshiradi |
 |---|---|
 | O'yin | 1–11-raundlarning har biri boshidan oxirigacha o'ynaladi; har bir holatda 125 soniya kutilib taymer o'zi boshlanmasligi, 0 da to'xtashi, avtomatik o'tish bo'lmasligi, bir vaqtda 1 tadan ortiq audio/interval bo'lmasligi; har raundga 500 ta tasodifiy bosish (qotib qolish, noto'g'ri holat); HTMLdagi teglar balansi; "undefined/NaN" yo'qligi; o'lik tugmalar yo'qligi |
@@ -13,6 +13,8 @@ shuning uchun lint/TypeScript tekshiruvi va dependency o'rnatish bosqichlari qo'
 | Eski ma'lumot | Eski formatdagi 9 ta raundning mavzularga ko'chirilishi va zaxira nusxa saqlanishi |
 | Parol/musiqa/zaxira | Parol o'rnatish, noto'g'ri parol, seans muddati, himoyalangan amallar; musiqa kutubxonasi (saqlash, tanlash, o'chirish, hajm cheklovi); zaxirani tiklash va noto'g'ri faylni rad etish |
 | Ikki ekran | Boshlovchi holati ikkinchi ekranga uzatilganda ikkinchi ekran HTML'i boshlovchi HTML'i bilan 100% mos kelishi (1–11-raundlar, 100 dan ortiq holat) |
+| Server rejimi (mijoz) | Soxta server bilan: server rejimini aniqlash, parol bilan kirish (noto'g'ri/to'g'ri), mavzu va raundni serverga saqlash, fayl reyestri (Blob URL), versiya to'qnashuvi xabari va mahalliy holatni qaytarish, seans tugashi, brauzerdagi eski ma'lumotni serverga ko'chirish, sahifa yangilangandan keyin serverdan tiklash |
+| API funksiyalari | Soxta Neon va Blob paketlari bilan: GET/PUT holati, versiya to'qnashuvi (409), hajm (413), noto'g'ri ma'lumot (400), parol (401/200), cookie bayroqlari (HttpOnly, Secure, SameSite), soxta cookie rad etilishi, yuklash tokeni faqat admin uchun, muhit o'zgaruvchisi yo'qligida aniq xato |
 | Uzoq ishlash | 60 ta o'yin ketma-ket: kutilayotgan taymerlar soni va intervallar ko'payib ketmasligi |
 
 Production build: `npm run build` — muvaffaqiyatli (skript sintaksisi, majburiy qismlar, maxfiy kalit yo'qligi).
@@ -27,6 +29,7 @@ Production build: `npm run build` — muvaffaqiyatli (skript sintaksisi, majburi
 - "e'lon" so'zidagi noto'g'ri belgi to'g'rilandi.
 
 ## Tekshirilmagan / cheklovlar (yashirilmaydi)
+- **Server rejimi haqiqiy Neon, Vercel Blob va Vercel'da sinalmagan** (bu muhitda internet yo'q): server mantig'i soxta paketlar bilan sinalgan. `@neondatabase/serverless` va `@vercel/blob` paketlari o'rnatilmagan holda tekshirilgan, `esbuild` bilan Blob mijoz kutubxonasini yig'ish ham sinalmagan. Birinchi joylashdan keyin saqlash, fayl yuklash va kirishni qo'lda sinab ko'ring.
 - Haqiqiy brauzerda ko'rinish (dizayn, shriftlar, animatsiyalar, telefon va proyektor ekranlari) tekshirilmagan — testlar brauzersiz sun'iy muhitda bajarilgan.
 - Haqiqiy audio/video ijrosi, ritm animatsiyasi, katta fayllar, sekin internet holati tekshirilmagan.
 - Ikki ekranli namoyish mantig'i (holat uzatish va nusxa tekshiruvi) sinalgan, lekin haqiqiy ikki oyna/monitor o'rtasidagi ulanish, popup bloklash va video sinxronligi sinalmagan.

@@ -10,5 +10,14 @@
     "start": "npx --yes serve public -l 3000",
     "dev": "npx --yes serve public -l 3000"
   },
-  "engines": { "node": ">=18" }
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "latest",
+    "@vercel/blob": "latest"
+  },
+  "devDependencies": {
+    "esbuild": "latest"
+  }
 }
