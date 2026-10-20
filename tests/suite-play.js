@@ -1,5 +1,5 @@
 ;(async()=>{
-await null;await null;await null;
+for(let i=0;i<80;i++)await Promise.resolve();
 const bad=[],seenA=new Set();const chk=(c,m)=>{if(!c&&!bad.includes(m))bad.push(m)};
 const U=['img1','img2','img3','img4','img5','aud1','vid1','gif1'];U.forEach(k=>urls[k]='blob:'+k);
 const mk=(no,kind,qs,ex={})=>Object.assign({id:'r'+no,__tid:'t1',no,title:'T'+no,kind,type:no+'-raund',qs,qTime:30,aTime:60,qMusic:'aud1',aMusic:'aud1',draft:false,created:0,mod:0,rules:'Qoida 1\nQoida 2'},ex);
